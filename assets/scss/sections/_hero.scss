@@ -2,6 +2,15 @@
 
 -------------------------------------------------------------
 
-HOME PAGE STYLES
+HERO STYLES
 
 */
+
+.hero {
+	height:1200px;
+	background:$white url(../img/bg-hero.jpg) bottom center no-repeat;
+
+	.column-center {
+		padding-top:250px;
+	}
+}

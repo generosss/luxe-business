@@ -22,7 +22,7 @@ body.body-modal-open { overflow:hidden; }
 
 .container { 
 	margin:auto; 
-	width:1100px; 
+	width:1200px; 
 	position:relative; 
 
 	@include breakpoint(large) { 
@@ -44,15 +44,6 @@ img { max-width:100%; }
 	box-sizing:border-box; 
 	-webkit-box-sizing:border-box; 
 	-moz-box-sizing:border-box; 
-}
-
-.position-center {
-	position:absolute;
-	bottom:0px;
-	top:0px;
-	right:0px;
-	left:0px;
-	margin:auto;
 }
 
 .hide-ipad {

@@ -5,3 +5,19 @@
 NAVIGATION
 
 */
+
+.navigation {
+	@extend .position-top-left;
+	font-family:$heading-font-family;
+	font-weight:normal;
+	height:60px;
+	text-transform:uppercase;
+
+	a {
+		font-size:18px;
+		line-height:60px;
+		display:inline-block;
+		color:$black;
+		margin-right:15px;
+	}
+}

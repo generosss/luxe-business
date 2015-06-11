@@ -5,3 +5,46 @@
 FOOTER
 
 */
+
+footer {
+	border-top:2px solid #e3e3e3;
+	padding-top:100px;
+	padding-bottom:150px;
+	text-align:center;
+
+	nav {
+		margin:10px 0px;
+		font-family:$heading-font-family;
+		font-weight:normal;
+		height:60px;
+		text-transform:uppercase;
+
+		a {
+			font-size:18px;
+			line-height:60px;
+			display:inline-block;
+			color:$black;
+			margin-right:15px;
+		}
+	}
+
+	.logo {
+		margin:auto;
+		width:200px;
+		height:60px;
+		margin-bottom:10px;
+	}
+
+	.download {
+		margin:10px 0px;
+
+		.btn-black {
+			padding:0px 10px;
+			margin:0px 5px;
+
+			img { 
+				vertical-align:middle;
+			}
+		}
+	}
+}

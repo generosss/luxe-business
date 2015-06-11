@@ -1,0 +1,25 @@
+/* 
+
+-------------------------------------------------------------
+
+COLUMNS
+
+*/
+
+.column-center {
+	width:70%;
+	text-align:center;
+	margin:auto;
+}
+
+.row { @include clearfix; }
+
+.column-left {
+	width:45.833%;
+	float:left;
+}
+
+.column-right {
+	width:45.833%;
+	float:right;
+}

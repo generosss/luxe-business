@@ -1,0 +1,101 @@
+/* 
+
+-------------------------------------------------------------
+
+SAVE
+
+*/
+
+.save {
+	padding-top:100px;
+
+	.column-center {
+		margin-bottom:150px;
+	}
+
+	.graph {
+		height:540px;
+		position:relative;
+
+		.container { height:100%; }
+
+		.info {
+			font-size:18px;
+			height:130px;
+		}
+
+		.numbers {
+			@extend .position-top-left;
+			left:100px;
+			width:325px;
+		}
+
+		ul {
+			font-weight:$light;
+			position:relative;
+			line-height:60px;
+			list-style:none;
+			padding:0px;
+			margin:0px;
+			margin-top:50px;
+			z-index:1;
+
+			b { color:$blue; }
+
+			span {
+				display:inline-block;
+				float:right;
+				font-weight:bold;
+			}
+		}
+
+		.bars {
+			position:absolute;
+			height:570px;
+			width:200px;
+			left:650px;
+			bottom:0px;
+			z-index:5;
+
+			div {
+				@include border-radius(5px 5px 0px 0px);
+				@extend .position-bottom;
+				width:40px;
+				height:100%;
+				background:$black;
+			}
+
+			div.street {
+				background:#e3e3e3;
+				height:80%;
+				right:auto;
+			}
+
+			div.lots {
+				background:#c0c0c0;
+			}
+
+			div.luxe {
+				@include box-shadow(0px 0px 20px rgba(0,0,0,0.2));
+				background:$blue;
+				height:40%;
+				left:auto;
+			}
+		}
+
+		.line {
+			position:absolute;
+			left:0px;
+			bottom:0px;
+			width:100%;
+			border-top:1px solid #e9e9e9;
+			z-index:0;
+		}
+
+		.line-1 { bottom:60px; }
+		.line-2 { bottom:120px; }
+		.line-3 { bottom:180px; }
+		.line-4 { bottom:240px; }
+		.line-5 { bottom:300px; }
+	}
+}

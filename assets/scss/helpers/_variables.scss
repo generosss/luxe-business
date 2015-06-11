@@ -9,20 +9,24 @@ VARIABLES
 // Colors
 $black   : #000000;
 $white   : #ffffff;
+$gray    : #f7f7f7;
+$blue    : #00bff1;
 
 // Font weights
-$light 	 : 100;
-$regular : 300;
-$medium  : 500;
-$bold    : 700;
+$light 	 : 300;
+$regular : 400;
+$medium  : 700;
+$bold    : 900;
 
 // Primary Font
-$primary-font-family : 'Helvetica', sans-serif;
+$primary-font-family : 'Lato', sans-serif;
 $primary-font-weight : $regular;
-$primary-font-size   : 23px;
-$primary-font-color  : #757575;
-$primary-link-color  : #757575;
-$primary-line-height : 36px;
+$primary-font-size   : 16px;
+$primary-font-color  : #191919;
+$primary-line-height : 30px;
+
+// Heading Fonts
+$heading-font-family : 'TradeGothicLT-BoldCondTwenty';
 
 // Transitions
 $default-transition-property : all;

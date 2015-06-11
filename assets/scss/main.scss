@@ -1,5 +1,5 @@
 /*
-Project Title: Project Name
+Project Title: Luxe for Business
 Author: Gene Ross
 Author URI: http://geneross.co
 */
@@ -13,9 +13,18 @@ Author URI: http://geneross.co
 @import "base/global";
 
 /* Layout */
+@import "components/buttons";
+
+/* Layout */
+@import "layout/position";
+@import "layout/columns";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/footer";
 
 /* Sections */
 @import "sections/hero";
+@import "sections/save";
+@import "sections/perk";
+@import "sections/app";
+@import "sections/business";

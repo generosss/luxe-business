@@ -1,0 +1,46 @@
+/* 
+
+-------------------------------------------------------------
+
+BUTTONS
+
+*/
+
+.btn {
+	@extend .borderbox;
+	font-weight:normal;
+	display:inline-block;
+	font-family:$heading-font-family;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.btn-blue {
+	@include border-radius(5px);
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.2));
+	background:$blue;
+	color:$white;
+	line-height:70px;
+	padding:0px 30px;
+	font-size:20px;
+}
+
+.btn-black {
+	@include border-radius(5px);
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.2));
+	background:$black;
+	color:$white;
+	line-height:70px;
+	padding:0px 30px;
+	font-size:20px;
+}
+
+.btn-border {
+	@include border-radius(5px);
+	background:$white;
+	color:$blue;
+	border:2px solid #ececec;
+	line-height:50px;
+	padding:0px 25px;
+	font-size:18px;
+}

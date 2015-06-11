@@ -6,6 +6,14 @@ TYPOGRAPHY
 
 */
 
+@font-face {
+  font-family: $heading-font-family;
+  src: url('../fonts/2C10B3_0_0.eot');
+  src: url('../fonts/2C10B3_0_0.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/2C10B3_0_0.woff') format('woff'),
+       url('../fonts/2C10B3_0_0.ttf') format('truetype');
+}
+
 body { 
 	font-family:$primary-font-family; 
 	font-weight:$primary-font-weight;
@@ -15,19 +23,31 @@ body {
 }
 
 h1, h2, h3, h4 {
+	font-family:$heading-font-family;
+	margin:0px;
+	padding:0px;
+	color:$black;
+	text-transform:uppercase;
+	font-weight:normal;
 
+	span {
+		color:$blue;
+	}
 }
 
 h1 {
-	
+	font-size:70px;
+	line-height:70px;
 }
 
 h2 {
-
+	font-size:45px;
+	line-height:45px;
 }
 
 h3 {
-
+	font-size:25px;
+	line-height:25px;
 }
 
 h4 {
@@ -35,5 +55,22 @@ h4 {
 }
 
 a {
+	@include transition(all 0.5s $easeOutQuint);
+	color:$blue;
+	text-decoration:none;
 
+	img { border:none; }
+}
+
+p {
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+p.larger {
+	font-size:25px;
+	line-height:40px;
+	margin-top:10px;
+	margin-bottom:40px;
+	font-weight:$light;
 }

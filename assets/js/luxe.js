@@ -1,4 +1,4 @@
-var ProjectName = (function($) {
+var Luxe = (function($) {
 
 	var init = function() {
 
@@ -14,5 +14,5 @@ var ProjectName = (function($) {
 }(jQuery));
 
 $(function() {
-	ProjectName.init();
+	Luxe.init();
 });
