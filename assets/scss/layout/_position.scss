@@ -26,10 +26,20 @@ POSITIONS
 	bottom:auto;
 }
 
+.position-left {
+	@extend .position-center;
+	right:auto;
+}
+
 .position-top-right {
 	@extend .position-center;
 	left:auto;
 	bottom:auto;
+}
+
+.position-right {
+	@extend .position-center;
+	left:auto;
 }
 
 .position-bottom {

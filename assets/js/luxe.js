@@ -2,8 +2,20 @@ var Luxe = (function($) {
 
 	var init = function() {
 
-		// Set up any all 
-		// default libraries here
+		// add animate class
+		setTimeout(function(){
+			$('body').addClass('animate-in');
+		}, 250);
+
+		// waypoints
+		$('.save').waypoint(function(direction) { 
+			$(this).addClass('animate-save', direction === 'down');
+		}, { offset: 200 });
+
+		$('.app').waypoint(function(direction) { 
+			$(this).addClass('animate-app', direction === 'down');
+		}, { offset: 200 });
+
 
 	};
 	

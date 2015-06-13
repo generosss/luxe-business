@@ -23,6 +23,17 @@ BUTTONS
 	line-height:70px;
 	padding:0px 30px;
 	font-size:20px;
+
+	@include breakpoint(medium) { 
+		line-height:60px;
+		font-size:18px;
+		padding:0px 25px;
+	}
+}
+
+.btn-blue:hover {
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.3));
+	background:lighten($blue,10%);
 }
 
 .btn-black {
@@ -33,6 +44,17 @@ BUTTONS
 	line-height:70px;
 	padding:0px 30px;
 	font-size:20px;
+
+	@include breakpoint(medium) { 
+		line-height:60px;
+		font-size:18px;
+		padding:0px 25px;
+	}
+}
+
+.btn-black:hover {
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.3));
+	background:lighten($black,10%);
 }
 
 .btn-border {
@@ -43,4 +65,29 @@ BUTTONS
 	line-height:50px;
 	padding:0px 25px;
 	font-size:18px;
+
+	@include breakpoint(medium) { 
+		line-height:40px;
+		font-size:16px;
+		padding:0px 20px;
+	}
+}
+
+.btn-border:hover {
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.1));
+}
+
+
+.btn-circle {
+	@include border-radius(100%);
+	background:$white;
+	border:2px solid #ececec;
+	height:80px;
+	width:80px;
+	line-height:50px;
+	padding:0px;
+}
+
+.btn-circle:hover {
+	@include box-shadow(0px 0px 20px rgba(0,0,0,0.1));
 }

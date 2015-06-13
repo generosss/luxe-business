@@ -6,8 +6,178 @@ APP
 
 */
 
+$transition : 0.45s all $easeOutQuad;
+
 .app {
+	padding:180px 0px;
 	background:$gray;
-	height:1200px;
 	border-top:2px solid #e3e3e3;
+	text-align:center;
+
+	.column-center {
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.15s);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
+	@include breakpoint(medium) {
+		padding:110px 0px;
+	}
+
+	.phones {
+		height:1000px;
+		width:1000px;
+		margin:70px auto;
+		position:relative;
+
+		@include breakpoint(large) { 
+			width:800px;
+			height:800px;
+		}
+
+		@include breakpoint(medium) {
+			width:500px;
+			height:500px;
+		}
+
+		.phone-top {
+			@extend .position-center;
+			width:500px;
+			height:890px;
+			z-index:5;
+
+			// animation attributes
+			@include transition($transition);
+			@include transition-delay(0.45s);
+			@include transform(scale(0.85));
+			opacity:0;
+
+			@include breakpoint(large) { 
+				width:400px;
+				height:715px;
+			}
+
+			@include breakpoint(medium) { 
+				width:280px;
+				height:500px;
+			}
+		}
+
+		.phone-right {
+			@extend .position-right;
+			width:330px;
+			height:680px;
+			z-index:4;
+			right:120px;
+
+			// animation attributes
+			@include transition($transition);
+			@include transition-delay(0.55s);
+			@include shiftX(-100px);
+			opacity:0;
+
+			@include breakpoint(large) { 
+				width:230px;
+				height:475px;
+			}
+
+			@include breakpoint(medium) { 
+				width:180px;
+				height:375px;
+				right:50px;
+			}
+		}
+
+		.phone-left {
+			@extend .position-left;
+			width:330px;
+			height:680px;
+			z-index:4;
+			left:120px;
+
+			// animation attributes
+			@include transition($transition);
+			@include transition-delay(0.55s);
+			@include shiftX(100px);
+			opacity:0;
+
+			@include breakpoint(large) { 
+				width:230px;
+				height:475px;
+			}
+
+			@include breakpoint(medium) { 
+				left:50px;
+				width:180px;
+				height:375px;
+			}
+		}
+
+		.circle {
+			@include border-radius(100%);
+			@extend .position-center;
+			@extend .borderbox;
+			border:2px solid #e3e3e3;
+			width:100%;
+			height:100%;
+			z-index:0;
+
+			// animation attributes
+			@include transition($transition);
+			@include transition-delay(0.35s);
+			@include transform(scale(0.85));
+			opacity:0;
+		}
+
+		.circle-inner {
+			border:6px solid #e3e3e3;
+			width:85%;
+			height:85%;
+			z-index:0;
+		}
+	}
+
+	.row {
+		margin-bottom:50px;
+	}
+
+	span.step {
+		@include border-radius(100%);
+		font-family:$heading-font-family;
+		font-weight:$light;
+		color:$blue;
+		font-size:20px;
+		border:2px solid $blue;
+		margin:20px auto;
+		display:block;
+		width:50px;
+		height:50px;
+		line-height:50px;
+	}
+}
+
+.animate-app {
+	.column-center {
+		@include shiftY(0px);
+		opacity:1;
+	}
+
+	.phones {
+		.phone-top {
+			@include transform(scale(1));
+			opacity:1;
+		}
+
+		.phone-left, .phone-right {
+			@include shiftX(0px);
+			opacity:1;
+		}
+
+		.circle {
+			@include transform(scale(1));
+			opacity:1;
+		}
+	}	
 }

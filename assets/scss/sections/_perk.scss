@@ -8,17 +8,126 @@ PERK
 
 .perk {
 	padding:200px 0px;
-	border-top:2px solid #e3e3e3;	
+	padding-bottom:370px;
+	border-top:2px solid #e3e3e3;
+	overflow:hidden;
+
+	@include breakpoint(large) { 
+		padding:150px 0px;
+		padding-bottom:330px;
+	}
+
+	@include breakpoint(medium) { 
+		padding:150px 0px;
+		padding-bottom:790px;
+	}
+
+	@include breakpoint(small) { 
+		padding-bottom:0px;
+	}
+
+	.valet {
+		position:absolute;
+		left:-340px;
+		bottom:-390px;
+		width:930px;
+		z-index:0;
+
+		@include breakpoint(large) { 
+			width:730px;
+			left:-240px;
+		}
+
+		@include breakpoint(medium) { 
+			width:600px;
+			left:50px;
+			bottom:-810px;
+		}
+
+		@include breakpoint(small) { 
+			position:relative;
+			bottom:auto;
+			left:auto;
+			width:100%;
+			margin-top:80px;
+			margin-bottom:-10px;
+		}
+	}
+
+	.valet-callout {
+		@extend .position-bottom-left;
+		left:-15px;
+		bottom:280px;
+		width:270px;
+		height:380px;
+		text-align:center;
+
+		@include breakpoint(large) { 
+			width:200px;
+			height:300px;
+			left:20px;
+			bottom:150px;
+		}
+
+		@include breakpoint(medium) { 
+			bottom:-380px;
+			left:0px;
+			right:0px;
+			margin:auto;
+		}
+
+		@include breakpoint(small) { display:none; }
+
+		.meet {
+			letter-spacing:2px;
+		}
+	}
+
+	.circles {
+		@extend .position-bottom;
+		width:270px;
+		height:270px;
+
+		@include breakpoint(large) { 
+			width:200px;
+			height:200px;
+		}
+
+		span {
+			@extend .borderbox;
+			@extend .position-center;
+			@include border-radius(100%);
+			display:block;
+			border:2px solid #e3e3e3;
+			width:100%;
+			height:100%;
+		}
+
+		span:last-child {
+			width:80%;
+			height:80%;
+			border:6px solid #e3e3e3;
+		}
+	}
+
+	.column-right {
+		position:relative;
+		width:37.5%;
+		margin-right:8.333%;
+		z-index:1;
+
+		@include breakpoint(medium) { 
+			width:80%;
+			float:none;
+			margin:auto;
+			text-align:center;
+		}
+	}
+
+	.btn { margin-top:40px; }
 
 	b {
 		font-weight:$bold;
 		text-transform:uppercase;
 	}
-
-	.column-right {
-		width:37.5%;
-		margin-right:8.333%;
-	}
-
-	.btn { margin-top:40px; }
 }

@@ -30,6 +30,20 @@
           transform: $str; 
 }
 
+@mixin shiftY($px) {
+  -webkit-transform: translate3d(0px,$px,0px);
+     -moz-transform: translate3d(0px,$px,0px);
+      -ms-transform: translate3d(0px,$px,0px);
+          transform: translate3d(0px,$px,0px);
+}
+
+@mixin shiftX($px) {
+  -webkit-transform: translate3d($px,0px,0px);
+     -moz-transform: translate3d($px,0px,0px);
+      -ms-transform: translate3d($px,0px,0px);
+          transform: translate3d($px,0px,0px);
+}
+
 @mixin clearfix {
   &:after {
     content: "";

@@ -10,6 +10,10 @@ COLUMNS
 	width:70%;
 	text-align:center;
 	margin:auto;
+
+	@include breakpoint(small) { 
+		width:90%;
+	}
 }
 
 .row { @include clearfix; }
@@ -17,9 +21,37 @@ COLUMNS
 .column-left {
 	width:45.833%;
 	float:left;
+
+	@include breakpoint(small) { 
+		width:100%;
+		margin:30px 0px;
+		float:none;
+	}
 }
 
 .column-right {
 	width:45.833%;
 	float:right;
+
+	@include breakpoint(small) { 
+		width:100%;
+		margin:30px 0px;
+		float:none;
+	}
+}
+
+.column-three {
+	width:29.166%;
+	float:left;
+	margin-left:6.25%;
+
+	@include breakpoint(small) { 
+		width:100%;
+		margin:30px 0px;
+		float:none;
+	}
+}
+
+.column-three:first-child {
+	margin:0%;
 }

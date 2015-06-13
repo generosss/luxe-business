@@ -11,8 +11,18 @@ BUSINESS
 	border-top:2px solid #e3e3e3;
 	text-align:center;
 
+	@include breakpoint(medium) {
+		padding:80px 0px;
+	}
+
 	a {
+		display:inline-block;
+		width:23%;
 		opacity:0.5;
+
+		@include breakpoint(medium) {
+			width:20%;
+		}
 	}
 
 	a:hover {

@@ -13,11 +13,20 @@ NAVIGATION
 	height:60px;
 	text-transform:uppercase;
 
+	@include breakpoint(medium) { 
+		display:none;
+	}
+
 	a {
 		font-size:18px;
 		line-height:60px;
 		display:inline-block;
 		color:$black;
 		margin-right:15px;
+
+		@include breakpoint(medium) { 
+			line-height:40px;
+			font-size:16px;
+		}
 	}
 }
