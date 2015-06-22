@@ -1,0 +1,26 @@
+/* 
+
+-------------------------------------------------------------
+
+SIGN UP
+
+*/
+
+.signup {
+	// animation attributes
+	@include transition($transition);
+	@include transition-delay(0.15s);
+	@include shiftY(50px);
+	opacity:0;
+
+	.fields {
+		margin:30px 0px;
+	}
+}
+
+.modal-active {
+	.signup {
+		@include shiftY(0px);
+		opacity:1;
+	}
+}

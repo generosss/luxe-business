@@ -7,7 +7,6 @@ FOOTER
 */
 
 footer {
-	border-top:2px solid #e3e3e3;
 	padding-top:100px;
 	padding-bottom:150px;
 	text-align:center;
@@ -31,7 +30,7 @@ footer {
 			line-height:60px;
 			display:inline-block;
 			color:$black;
-			margin:0px 25px;
+			margin:0px 8px;
 
 			@include breakpoint(large) { 
 				font-size:16px;
@@ -46,6 +45,8 @@ footer {
 				border-bottom:1px solid #e3e3e3;
 			}
 		}
+
+		a:hover { color:$blue; }
 	}
 
 	.logo {
@@ -71,8 +72,36 @@ footer {
 			padding:0px 10px;
 			margin:0px 5px;
 
+			@include breakpoint(small) {
+				margin:10px 0px;
+			}
+
 			img { 
 				vertical-align:middle;
+			}
+		}
+	}
+
+	.social {
+		margin-top:30px;
+
+		a {
+			@include border-radius(100%);
+			display:inline-block;
+			height:50px;
+			width:50px;
+			border:2px solid #e3e3e3;
+			margin:0px 5px;
+
+			path {
+				@include transition(all 0.5s $easeOutQuint);
+				fill:$black;
+			}
+		}
+
+		a:hover {
+			path {
+				fill:$blue;
 			}
 		}
 	}

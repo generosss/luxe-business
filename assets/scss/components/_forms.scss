@@ -1,0 +1,54 @@
+/* 
+
+-------------------------------------------------------------
+
+FORMS
+
+*/
+
+.forms {
+	@extend .borderbox;
+	font-family:$heading-font-family;
+	font-size:16px;
+	color:#000000;
+	background:transparent;
+	border:none;
+}
+
+.forms-txt {
+	@include transition($transition);
+	@extend .forms;
+	display:block;
+	width:100%;
+	border-bottom:2px solid #e3e3e3;
+	text-align:center;
+	font-weight:$light;
+	text-transform:uppercase;
+	padding:10px 0px;
+	margin:15px 0px;
+}
+
+.forms-option {
+	@extend .forms;
+	text-align:center;
+	margin:40px 0px;
+
+	a {
+		font-family:$primary-font-family;
+		display:inline-block;
+		margin:0px 30px;
+		font-size:24px;
+		line-height:50px;
+		color:#c0c0c0;
+	}
+
+	a.active, a:hover {
+		color:$black;
+	}
+
+	span { display:block; }
+}
+
+.error {
+	border-bottom:2px solid #ff0000;
+}

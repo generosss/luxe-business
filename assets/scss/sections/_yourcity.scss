@@ -1,0 +1,76 @@
+/* 
+
+-------------------------------------------------------------
+
+YOUR CITY
+
+*/
+
+.yourcity {
+	position:relative;
+	padding:250px 0px;
+	padding-bottom:350px;
+	border-bottom:2px solid #e3e3e3;
+	overflow:hidden;
+
+	@include breakpoint(small) {
+		padding-top:150px;
+	}
+
+	.yourcity-bg {
+		@extend .position-top;
+		background:$white url(../img/bg-yourcity.jpg) bottom center repeat-x;
+		width:100%;
+		height:100%;
+
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.25s);
+		@include shiftY(50px);
+		opacity:0;
+
+		@include breakpoint(small) { background-size:1800px; }
+
+	}
+
+	.column-center {
+		// animation attributes
+		@include transition($transition);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
+	.signup {
+		width:500px;
+		margin:auto;
+		text-align:center;
+		margin-top:80px;
+
+		@include breakpoint(small) { width:100%; }
+	}
+
+	.flag {
+		@extend .position-bottom;
+		bottom:150px;
+		width:100px;
+		height:100px;
+
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.25s);
+		@include shiftY(50px);
+		opacity:0;
+
+		img {
+			margin-left:30px;
+		}
+	}
+}
+
+.animate-yourcity {
+
+	.yourcity-bg, .flag, .column-center, .signup {
+		@include shiftY(0px);
+		opacity:1;
+	}
+}

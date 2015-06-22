@@ -1,0 +1,70 @@
+/* 
+
+-------------------------------------------------------------
+
+MODAL
+
+*/
+
+.modal {
+	@include transition($transition);
+	@extend .borderbox;
+	position:fixed;
+	height:100%;
+	width:100%;
+	background:rgba(0,0,0,0.1);
+	z-index:400;
+	opacity:0;
+	visibility:hidden;
+	overflow:auto;
+
+	.modal-content { 
+		@include transition($transition);
+		@include shiftY(50px);
+		@include border-radius(5px);
+		@extend .borderbox;
+		padding:70px 50px;
+		margin:200px auto;
+		width:500px;
+		background:#ffffff;
+		opacity:0;
+		position:relative;
+		text-align:center;
+
+		@include breakpoint(small) {
+			width:90%;
+			margin:100px auto;
+		}
+	}
+
+	.close {
+		position:absolute;
+		left:0px;
+		top:-60px;
+		width:100%;
+		text-align:center;
+		font-family:$heading-font-family;
+		font-weight:$light;
+		text-transform:uppercase;
+	}
+
+	
+}
+
+.modal-active {
+	@include transform(translate3d(0px,0px,0px));
+	overflow-scrolling:touch;
+	-webkit-overflow-scrolling:touch;
+	opacity:1;
+	visibility:visible;
+
+	.modal-content {
+		@include transform(translate3d(0px,0px,0px));
+		opacity:1;
+	}
+
+	.close {
+		@include transform(translate3d(0px,0px,0px));
+		opacity:1;
+	}
+}

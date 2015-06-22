@@ -116,7 +116,7 @@
     @media (min-width: 1800px) { @content; }
   }
   @else if $point == large {
-    @media (max-width: 1150px) { @content; }
+    @media (max-width: 1250px) { @content; }
   }
   @else if $point == medium {
     @media (max-width: 960px) { @content; }

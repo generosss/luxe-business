@@ -9,7 +9,7 @@ PERK
 .perk {
 	padding:200px 0px;
 	padding-bottom:370px;
-	border-top:2px solid #e3e3e3;
+	// border-top:2px solid #e3e3e3;
 	overflow:hidden;
 
 	@include breakpoint(large) { 
@@ -40,7 +40,7 @@ PERK
 
 		@include breakpoint(medium) { 
 			width:600px;
-			left:50px;
+			left:25px;
 			bottom:-810px;
 		}
 
@@ -83,10 +83,24 @@ PERK
 		}
 	}
 
+	.valet-text {
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.35s);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
 	.circles {
 		@extend .position-bottom;
 		width:270px;
 		height:270px;
+
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.35s);
+		@include transform(scale(0.45));
+		opacity:0;
 
 		@include breakpoint(large) { 
 			width:200px;
@@ -116,6 +130,11 @@ PERK
 		margin-right:8.333%;
 		z-index:1;
 
+		// animation attributes
+		@include transition($transition);
+		@include shiftY(50px);
+		opacity:0;
+
 		@include breakpoint(medium) { 
 			width:80%;
 			float:none;
@@ -124,10 +143,35 @@ PERK
 		}
 	}
 
+	.perk-list {
+		// animation attributes
+		@include transition($transition);
+		@include shiftY(100px);
+		opacity:0;
+	}
+
 	.btn { margin-top:40px; }
 
 	b {
 		font-weight:$bold;
 		text-transform:uppercase;
+	}
+}
+
+/*
+
+ANIMATE SAVE
+
+*/
+
+.animate-perk {
+	.column-right, .perk-list, .valet-text {
+		@include shiftY(0px);
+		opacity:1;
+	}
+
+	.circles {
+		@include transform(scale(1));
+		opacity:1;
 	}
 }

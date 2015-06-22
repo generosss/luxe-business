@@ -12,6 +12,9 @@ $white   : #ffffff;
 $gray    : #f7f7f7;
 $blue    : #00bff1;
 
+// Test Border
+$border : 1px solid $black;
+
 // Font weights
 $light 	 : 300;
 $regular : 400;
@@ -28,13 +31,10 @@ $primary-line-height : 30px;
 // Heading Fonts
 $heading-font-family : 'TradeGothicLT-BoldCondTwenty';
 
-// Transitions
-$default-transition-property : all;
-$default-transition-duration : 1s;
-$default-transition-function : false;
-$default-transition-delay    : false;
-
 // Easing
 $easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000); 
 $easeOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
 $easeOutQuad: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+// Transitions
+$transition : 0.45s all $easeOutQuad;

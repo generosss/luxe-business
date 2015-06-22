@@ -6,9 +6,8 @@ SAVE
 
 */
 
-$transition : 0.45s all $easeOutQuad;
-
 .save {
+	display:none;
 	padding-top:100px;
 
 	.column-center {
@@ -153,6 +152,13 @@ $transition : 0.45s all $easeOutQuad;
 		.line-5 { bottom:300px; }
 	}
 }
+
+/*
+
+ANIMATE SAVE
+
+*/
+
 
 .animate-save {
 	.column-center {

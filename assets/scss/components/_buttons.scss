@@ -18,6 +18,7 @@ BUTTONS
 .btn-blue {
 	@include border-radius(5px);
 	@include box-shadow(0px 0px 20px rgba(0,0,0,0.2));
+	@extend .btn;
 	background:$blue;
 	color:$white;
 	line-height:70px;
@@ -39,6 +40,7 @@ BUTTONS
 .btn-black {
 	@include border-radius(5px);
 	@include box-shadow(0px 0px 20px rgba(0,0,0,0.2));
+	@extend .btn;
 	background:$black;
 	color:$white;
 	line-height:70px;
@@ -59,6 +61,7 @@ BUTTONS
 
 .btn-border {
 	@include border-radius(5px);
+	@extend .btn;
 	background:$white;
 	color:$blue;
 	border:2px solid #ececec;
@@ -77,14 +80,13 @@ BUTTONS
 	@include box-shadow(0px 0px 20px rgba(0,0,0,0.1));
 }
 
-
 .btn-circle {
 	@include border-radius(100%);
+	@extend .btn;
 	background:$white;
 	border:2px solid #ececec;
 	height:80px;
 	width:80px;
-	line-height:50px;
 	padding:0px;
 }
 

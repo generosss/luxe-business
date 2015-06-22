@@ -1,0 +1,59 @@
+/* 
+
+-------------------------------------------------------------
+
+USE CASE
+
+*/
+
+.usecase {
+	padding:180px 0px;
+	border-top:2px solid #e3e3e3;
+	text-align:center;
+
+	@include breakpoint(large) {
+		padding:150px 0px;
+	}
+
+
+	@include breakpoint(medium) {
+		padding:110px 0px;
+	}
+
+	.column-center {
+		// animation attributes
+		@include transition($transition);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
+	.row {
+		margin:50px 0px;
+
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.15s);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
+	.enrollme {
+		// animation attributes
+		@include transition($transition);
+		@include transition-delay(0.25s);
+		@include shiftY(50px);
+		opacity:0;
+	}
+
+	b {
+		font-weight:$bold;
+		text-transform:uppercase;
+	}
+}
+
+.animate-usecase {
+	.column-center, .row, .enrollme {
+		@include shiftY(0px);
+		opacity:1;
+	}
+}

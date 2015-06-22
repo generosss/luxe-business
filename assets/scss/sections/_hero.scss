@@ -6,8 +6,6 @@ HERO STYLES
 
 */
 
-$transition : 0.45s all $easeOutQuad;
-
 .hero {
 	position:relative;
 	height:1200px;
@@ -20,6 +18,7 @@ $transition : 0.45s all $easeOutQuad;
 
 		// animation attributes
 		@include transition($transition);
+		@include transition-delay(0.15s);
 		@include shiftY(50px);
 		opacity:0;
 
@@ -41,12 +40,11 @@ $transition : 0.45s all $easeOutQuad;
 
 		// animation attributes
 		@include transition($transition);
-		// @include transition-delay(0.35s);
-		@include shiftY(-50px);
+		@include shiftY(50px);
 		opacity:0;
 
 		@include breakpoint(small) { 
-			padding-top:200px;
+			padding-top:140px;
 		}
 	}
 }

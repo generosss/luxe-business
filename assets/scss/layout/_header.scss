@@ -27,7 +27,9 @@ header {
 	}
 
 	.container {
-		@include breakpoint(medium) { width:100%; }
+		height:100%;
+
+		@include breakpoint(medium) { width:auto; }
 	}
 
 	.logo {
@@ -44,7 +46,8 @@ header {
 			width:100px;
 			height:30px;
 			right:auto; 
-			left:30px;
+			left:20px;
+			top:-8px;
 		}
 	}
 
@@ -54,9 +57,51 @@ header {
 		left:auto;
 		height:50px;
 		margin:0px;
-		right:30px;
+		right:0px;
+
+		@include breakpoint(medium) { right:40px; }
 
 		@include breakpoint(small) { display:none; }
+	}
+
+	.menu-btn {
+		@extend .position-top-left;
+		@include transition(all 0.75s $easeOutQuint);
+		display:none;
+		width:30px;
+		height:20px;
+		left:40px;
+		top:5px;
+
+		@include breakpoint(medium) { display:block; }
+
+		@include breakpoint(small) { 
+			right:20px; 
+			left:auto;
+		}
+
+		a {
+			display:block;
+			height:20px;
+		}
+
+		span, span:before, span:after {
+			@include transition(all 0.75s $easeOutQuint);
+			position:absolute;
+			top:10px;
+			left:0px;
+			display:block;
+			height:2px;
+			width:30px;
+			background:$black;
+			content:"";
+
+			@include breakpoint(small) { width:30px; }
+		}
+
+		span:before { top:-6px; }
+
+		span:after { top:6px; }
 	}
 }
 
@@ -64,5 +109,22 @@ header {
 	header {
 		@include shiftY(0px);
 		opacity:1;
+	}
+}
+
+.modal-open {
+	header {
+		.menu-button {
+			span, span:before, span:after { background:#ffffff; }
+
+			span { @include transform(rotate(45deg)); }
+
+			span:before { top:0px; }
+
+			span:after { 
+				@include transform(rotate(-90deg));
+				top:0px; 
+			}
+		}
 	}
 }

@@ -44,6 +44,11 @@ h1 {
 		line-height:65px;
 	}
 
+	@include breakpoint(medium) { 
+		font-size:55px;
+		line-height:55px;
+	}
+
 	@include breakpoint(small) { 
 		font-size:45px;
 		line-height:45px;
@@ -71,7 +76,8 @@ h3 {
 }
 
 h4 {
-
+	font-size:18px;
+	line-height:18px;
 }
 
 a {
